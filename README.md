@@ -3,8 +3,9 @@
 
 ## chain proxy
 
-your ip --vless+tcp+xtls--> VPS --(non-tiktok)--> direct connect
-                                --(tiktok)--> proxy provider via socks5 --> connect
+your ip --vless+tcp+xtls--> VPS 
+for non-tiktok req: direct connect
+for tiktok req: proxy provider via socks5 --> connect
 
 ## What it's for
 一种躲避屏蔽机房ip检测的解决方案，i.e. for Netflix, Tiktok. 具体链路见上。
@@ -25,3 +26,15 @@ curl --socks5 127.0.0.1:9001 https://ipinfo.io # inside vps
   "readme": "https://ipinfo.io/missingauth"
 }
 ```
+
+## How to use
+```
+# ssh into your vps
+git clone https://github.com/melaniedxu/xray-for-tiktok-private.git
+cd xray-for-tiktok-private
+chmod 755 xray.sh
+./xray.sh local_port_for_xray, secondary_proxy_addr, secondary_proxy_port, tls_domain_addr
+```
+一键脚本设置：
+* 双重代理
+* 证书加密
