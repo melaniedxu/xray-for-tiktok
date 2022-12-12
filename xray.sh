@@ -10,7 +10,6 @@ die () {
 
 
 # setup certs
-apt-get install -y curl 
 curl https://get.acme.sh | sh
 acme.sh --set-default-ca --server letsencrypt
 # 查看 cornjob

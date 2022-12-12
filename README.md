@@ -30,10 +30,7 @@ curl --socks5 127.0.0.1:9001 https://ipinfo.io # inside vps
 ## How to use
 ```
 # ssh into your vps
-git clone https://github.com/melaniedxu/xray-for-tiktok-private.git
-cd xray-for-tiktok-private
-chmod 755 xray.sh
-./xray.sh local_port_for_xray, secondary_proxy_addr, secondary_proxy_port, tls_domain_addr
+apt-get install -y curl && bash <(curl -L https://raw.githubusercontent.com/melaniedxu/xray-for-tiktok-private/main/xray.sh?token=GHSAT0AAAAAAB4JNVE25SRO6PS25OW7ORLYY4XX5QQ)
 ```
 一键脚本设置：
 * 双重代理
