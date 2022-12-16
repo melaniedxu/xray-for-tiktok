@@ -30,7 +30,7 @@ curl --socks5 127.0.0.1:9001 https://ipinfo.io # inside vps
 ## How to use
 ```
 # ssh into your vps
-apt-get install -y curl && bash <(curl -L https://raw.githubusercontent.com/melaniedxu/xray-for-tiktok-private/main/xray.sh?token=GHSAT0AAAAAAB4JNVE25SRO6PS25OW7ORLYY4XX5QQ)
+apt-get install -y curl && bash <(curl -L https://raw.githubusercontent.com/melaniedxu/xray-for-tiktok-private/main/xray.sh?token=GHSAT0AAAAAAB4JNVE25SRO6PS25OW7ORLYY4XX5QQ) $local_port, $secondary_proxy_addr, $secondary_proxy_port, $tls_domain_addr
 ```
 一键脚本设置：
 * 双重代理
